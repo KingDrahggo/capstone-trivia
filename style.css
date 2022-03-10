@@ -1,0 +1,71 @@
+/* Write your CSS Here. */
+body {
+    background-color: coral;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header {
+    position: relative;
+    top: 20px;
+    font-size: 150px;
+    text-align: center;
+    padding: 8px;
+    text-shadow: 5px 5px 8px rgb(54, 54, 54);
+  }
+  
+  #Main_Game_Box {
+    display: flex;
+    position: relative;
+    left: 0%;
+    width: 500px;
+    height: 200px;
+    top: 80px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 20%;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 10px 10px 5px rgb(54 54 54);
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  
+  #Score_Box {
+    display: flex;
+    top: 70%;
+    margin: 5px;
+    padding: 15px;
+    background-color: coral;
+    border-radius: 60%;
+    font-weight: 600;
+  }
+  
+  #Question_Box {
+    display: flex;
+    text-size-adjust: 10px;
+    word-wrap: break-word;
+    padding: 3px;
+    font-weight: 600;
+  }
+  
+  #Form {
+    padding: 5px;
+    margin: 5px;
+    font-weight: 600;
+  }
+  
+  #submit {
+    background-color: #888888;
+  }
+  
+  p {
+    display: flex;
+    font-size: 280%;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-shadow: 5px 5px 8px rgb(54, 54, 54);
+    padding: 0px;
+  }
