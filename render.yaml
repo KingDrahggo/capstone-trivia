@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: trivia-quiz
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist/trivia-quiz
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
