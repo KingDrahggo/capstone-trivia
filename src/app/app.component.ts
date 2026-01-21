@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { GameService, GameState } from './game.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'trivia-quiz';
+  GameState = GameState; // Expose enum to template
+  
+  constructor(public gameService: GameService) {}
+
+  startGame() {
+    this.gameService.startGame();
+  }
 }

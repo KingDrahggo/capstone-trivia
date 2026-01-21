@@ -1,0 +1,25 @@
+<div class="question-container" *ngIf="currentQuestion">
+  <div class="header-badges">
+    <span class="badge category">{{ decodeHtml(currentQuestion.category) }}</span>
+    <span class="badge difficulty" [ngClass]="currentQuestion.difficulty">{{ currentQuestion.difficulty | titlecase }}</span>
+  </div>
+
+  <h2 class="question-text">{{ decodeHtml(currentQuestion.question) }}</h2>
+
+  <div class="answers-grid">
+    <button *ngFor="let answer of shuffledAnswers" 
+            class="answer-btn" 
+            [class.selected]="selectedAnswer === answer"
+            [class.correct]="hasAnswered && answer === currentQuestion?.correct_answer"
+            [class.wrong]="hasAnswered && selectedAnswer === answer && answer !== currentQuestion?.correct_answer"
+            [class.dimmed]="hasAnswered && answer !== currentQuestion?.correct_answer && selectedAnswer !== answer"
+            [disabled]="hasAnswered"
+            (click)="onSelectAnswer(answer)">
+      {{ decodeHtml(answer) }}
+    </button>
+  </div>
+</div>
+
+<div *ngIf="isLoading && !currentQuestion" class="loading-state">
+  <div class="spinner"></div>
+</div>
